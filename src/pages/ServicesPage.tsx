@@ -58,7 +58,7 @@ const ServicesPage: React.FC = () => {
         "False Ceiling",
         "Facades & Elevation"
       ],
-      image: "https://images.unsplash.com/photo-1541625602330-2277a4c4b28d?auto=format&fit=crop&q=80&w=1000"
+      image: "https://images.unsplash.com/photo-1577199001468-44c049e7603f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Residential Layout",
@@ -74,7 +74,7 @@ const ServicesPage: React.FC = () => {
         "Parks, Parking, Entrance Security",
         "All approvals from BESCOM, BBMP, BDA & departments"
       ],
-      image: "https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?auto=format&fit=crop&q=80&w=1000"
+      image: "https://images.unsplash.com/photo-1721244654392-9c912a6eb236?q=80&w=1129&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "PEB Structures",

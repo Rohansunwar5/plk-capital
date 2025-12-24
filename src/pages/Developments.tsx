@@ -29,7 +29,7 @@ const Developments: React.FC = () => {
       ref={containerRef}
       className="bg-[#1a1a1a] text-[#f5f5f0] pt-40 pb-24 px-6 md:px-24"
     >
-      <div className="max-w-7xl mx-auto">
+      {/* <div className="max-w-7xl mx-auto">
         <header className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
             <h1 className="text-stone-500 uppercase tracking-[0.4em] text-xs font-medium mb-6">The Collection</h1>
@@ -69,7 +69,7 @@ const Developments: React.FC = () => {
             </Link>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

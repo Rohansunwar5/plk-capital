@@ -48,7 +48,7 @@ const Vision: React.FC = () => {
         <div className="vision-parallax-container grid grid-cols-1 md:grid-cols-12 gap-8 mb-48">
           <div className="reveal-item md:col-span-7 aspect-[16/10] bg-stone-200 overflow-hidden vision-parallax">
             <img 
-              src="https://images.unsplash.com/photo-1600607687940-c52af096999a?auto=format&fit=crop&q=80&w=1500" 
+              src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
               alt="Detail" 
               className="w-full h-full object-cover"
             />
