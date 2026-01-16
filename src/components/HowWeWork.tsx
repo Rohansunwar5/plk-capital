@@ -1,0 +1,107 @@
+import React, { useRef } from 'react';
+import { useReveal, useStagger } from '../hooks/useGsap';
+
+interface HowWeWorkProps {
+    variant?: 'default' | 'light';
+}
+
+export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => {
+    const isLight = variant === 'light';
+    const containerRef = useRef<HTMLElement>(null);
+    const headerRef = useRef<HTMLDivElement>(null);
+    const gridRef = useRef<HTMLDivElement>(null);
+    const quoteRef = useRef<HTMLDivElement>(null);
+
+    // Reveal animations
+    useReveal(containerRef, { threshold: 0.1 });
+    useStagger(headerRef, "h2, p", { y: 20, delay: 0.1 });
+    useStagger(gridRef, ".p-8, .p-16", { y: 30, stagger: 0.1, delay: 0.2 });
+    useReveal(quoteRef, { y: 20, delay: 0.5 });
+
+    // Styles
+    const sectionBg = isLight ? 'bg-[#F7F2EF]' : 'bg-plk-navy';
+    const textColor = isLight ? 'text-[#152E4D]' : 'text-white';
+    const subTextColor = isLight ? 'text-[#152E4D]/80' : 'text-plk-grey';
+    const borderColor = isLight ? 'border-[#152E4D]/10' : 'border-white/10';
+
+    const imageClass = isLight ? 'w-12 h-12 filter invert' : 'w-12 h-12';
+
+    return (
+        <section ref={containerRef} className={`${sectionBg} py-24`}>
+            <div className="max-w-7xl mx-auto px-4 md:px-12">
+                {/* Header */}
+                <div ref={headerRef} className="text-center mb-20">
+                    <h2 className={`text-4xl md:text-5xl font-serif ${textColor} mb-6`}>
+                        How We Work With Clients
+                    </h2>
+                    <p className={`${subTextColor} font-light text-lg`}>
+                        Principles that guide every client relationship
+                    </p>
+                </div>
+
+                {/* Staggered Grid Content */}
+                <div ref={gridRef} className="flex flex-col md:flex-row">
+
+                    {/* Left Column (Items 1 & 3) */}
+                    <div className={`w-full md:w-1/2 md:border-r ${borderColor}`}>
+                        {/* Item 1: Independent Advice */}
+                        <div className={`p-8 md:p-16 border-b ${borderColor}`}>
+                            <div className="mb-8">
+                                <img src="/src/assets/icons/menu.png" alt="Icon" className={imageClass} />
+                            </div>
+                            <h3 className={`text-2xl font-serif ${textColor} mb-6`}>Independent Advice</h3>
+                            <p className={`${subTextColor} font-light text-lg leading-relaxed`}>
+                                We provide advice that is free from product commissions, incentives, or targets—so recommendations are guided only by what is right for you.
+                            </p>
+                        </div>
+
+                        {/* Item 3: Long-Term Discipline */}
+                        <div className={`p-8 md:p-16 border-b md:border-b-0 ${borderColor}`}>
+                            <div className="mb-8">
+                                <img src="/src/assets/icons/chart.png" alt="Icon" className={imageClass} />
+                            </div>
+                            <h3 className={`text-2xl font-serif ${textColor} mb-6`}>Long-Term Discipline</h3>
+                            <p className={`${subTextColor} font-light text-lg leading-relaxed`}>
+                                We focus on consistency, asset allocation, and behaviour over time—rather than reacting to short-term market movements or noise.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Right Column (Items 2 & 4) - Staggered Down */}
+                    <div className="w-full md:w-1/2 md:mt-24">
+                        {/* Item 2: Risk Before Returns */}
+                        <div className={`p-8 md:p-16 border-b ${borderColor}`}>
+                            <div className="mb-8">
+                                <img src="/src/assets/icons/wallet-check.png" alt="Icon" className={imageClass} />
+                            </div>
+                            <h3 className={`text-2xl font-serif ${textColor} mb-6`}>Risk Before Returns</h3>
+                            <p className={`${subTextColor} font-light text-lg leading-relaxed`}>
+                                Every portfolio is built around an agreed understanding of risk. Protecting capital and managing downside always come before pursuing returns.
+                            </p>
+                        </div>
+
+                        {/* Item 4: Fiduciary Responsibility */}
+                        <div className={`p-8 md:p-16`}>
+                            <div className="mb-8">
+                                <img src="/src/assets/icons/judge.png" alt="Icon" className={imageClass} />
+                            </div>
+                            <h3 className={`text-2xl font-serif ${textColor} mb-6`}>Fiduciary Responsibility</h3>
+                            <p className={`${subTextColor} font-light text-lg leading-relaxed`}>
+                                As a fee-only fiduciary, we are legally and ethically required to act in our clients' best interest—clearly, independently, and without conflict.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                {/* Footer Quote */}
+                <div ref={quoteRef} className="text-center mt-20 max-w-4xl mx-auto opacity-0">
+                    <p className={`text-2xl md:text-3xl font-serif ${textColor} leading-normal`}>
+                        While markets change, our responsibility remains the same—helping clients make better decisions, consistently
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    );
+};

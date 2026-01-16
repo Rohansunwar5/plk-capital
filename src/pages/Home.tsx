@@ -1,22 +1,18 @@
-
 import React from 'react';
-import Hero from '../components/sections/Hero';
-import About from '../components/sections/About';
-import SEO from '../components/seo/SEO';
+import { Hero } from '../components/Hero';
+import { Philosophy } from '../components/Philosophy';
+import { WhatWeDo } from '../components/WhatWeDo';
+import { AboutUs } from '../components/AboutUs';
+import { HowWeWork } from '../components/HowWeWork';
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
   return (
-    <div className="page-container">
-      <SEO />
+    <main className="flex-grow bg-plk-navy">
       <Hero />
-      {/* <About />
-      <Developments />
-      <Services />
-      <Mantras />
-      <Amenities />
-      <Testimonials /> */}
-    </div>
+      <Philosophy />
+      <WhatWeDo />
+      <AboutUs />
+      <HowWeWork />
+    </main>
   );
 };
-
-export default Home;
