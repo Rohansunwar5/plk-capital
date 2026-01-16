@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLoadReveal, useHeaderScroll } from '../hooks/useGsap';
+import logo from '../assets/logo.png';
 
 export const Header: React.FC = () => {
     const location = useLocation();
@@ -16,8 +17,8 @@ export const Header: React.FC = () => {
         : "border border-white/20 bg-plk-navy/50 backdrop-blur-sm";
 
     const textColor = isLightPage ? "text-[#0B1B2F]" : "text-plk-white";
-    const activeColor = "text-plk-green"; // Keeping green for active/branding
-    const logoSrc = "/src/assets/logo.png"; // Assuming same logo for now, or maybe a dark version exists? The design shows the same logo but on light bg.
+    const activeColor = "text-plk-green";
+    const logoSrc = logo;
 
     return (
         <header ref={headerRef} className="fixed top-0 left-0 w-full py-6 px-4 md:px-12 z-50 opacity-0 transition-opacity">

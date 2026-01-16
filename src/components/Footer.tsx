@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 
 export const Footer: React.FC = () => {
     return (
@@ -10,7 +11,7 @@ export const Footer: React.FC = () => {
 
                     {/* Logo Column */}
                     <div className="flex-shrink-0">
-                        <img src="/src/assets/logo.png" alt="PLK Capital" className="h-10 md:h-12 object-contain" />
+                        <img src={logo} alt="PLK Capital" className="h-10 md:h-12 object-contain" />
                     </div>
 
                     {/* Links Container */}

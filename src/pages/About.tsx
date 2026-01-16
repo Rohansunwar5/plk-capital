@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useReveal, useStagger } from '../hooks/useGsap';
 import { WhatWeDo } from '../components/WhatWeDo';
 import { HowWeWork } from '../components/HowWeWork';
+import profileImg from '../assets/aboutUs1.png';
 
 export const About: React.FC = () => {
   const section1Ref = useRef<HTMLElement>(null);
@@ -24,7 +25,7 @@ export const About: React.FC = () => {
       <section ref={section1Ref} className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 mb-32 px-4 md:px-12 opacity-0">
         {/* Profile Image */}
         <div className="w-full md:w-1/3">
-          <img src="/src/assets/aboutUs1.png" alt="Mehul Jain" className="w-full rounded-lg shadow-sm" />
+          <img src={profileImg} alt="Mehul Jain" className="w-full rounded-lg shadow-sm" />
         </div>
 
         {/* Quote */}

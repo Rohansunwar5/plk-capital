@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useReveal, useStagger } from '../hooks/useGsap';
+import logo from '../assets/logo.png';
 
 export const Hero: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -30,7 +31,7 @@ export const Hero: React.FC = () => {
                 <div className="flex-1 flex flex-col items-center justify-center relative z-10 min-h-[300px]">
                     {/* Big Logo in Video Area */}
                     <div className="flex items-center justify-center mb-8 opacity-90">
-                        <img src="/src/assets/logo.png" alt="PLK Capital" className="h-16 md:h-20 w-auto object-contain" />
+                        <img src={logo} alt="PLK Capital" className="h-16 md:h-20 w-auto object-contain" />
                     </div>
 
                     <div className="text-plk-red tracking-widest text-lg font-medium cursor-pointer hover:underline underline-offset-4 decoration-plk-red">

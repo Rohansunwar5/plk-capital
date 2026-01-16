@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import { useReveal, useStagger, useHover } from '../hooks/useGsap';
+import aboutUs1 from '../assets/aboutUs1.png';
+import aboutUs2 from '../assets/aboutUs2.png';
 
 export const AboutUs: React.FC = () => {
     const topSectionRef = useRef<HTMLDivElement>(null);
@@ -47,7 +49,7 @@ export const AboutUs: React.FC = () => {
 
                             {/* Col 1: Large Portrait (Spans 2 rows visually roughly) */}
                             <div className="relative row-span-2">
-                                <img src="/src/assets/aboutUs1.png" alt="Profile" className="w-full h-[300px] md:h-[400px] object-cover rounded-lg" />
+                                <img src={aboutUs1} alt="Profile" className="w-full h-[300px] md:h-[400px] object-cover rounded-lg" />
                                 {/* Small ratings card overlay/below */}
                                 <div className="absolute -bottom-12 md:-bottom-16 left-4 right-4 bg-white rounded-lg p-4 shadow-lg z-10">
                                     <div className="text-sm font-bold text-plk-navy mb-2">Best ratings</div>
@@ -78,7 +80,7 @@ export const AboutUs: React.FC = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <img src="/src/assets/aboutUs2.png" alt="Tech" className="w-full aspect-square object-cover rounded-lg" />
+                                <img src={aboutUs2} alt="Tech" className="w-full aspect-square object-cover rounded-lg" />
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,9 @@
 import React, { useRef } from 'react';
 import { useReveal, useStagger } from '../hooks/useGsap';
+import menuIcon from '../assets/icons/menu.png';
+import chartIcon from '../assets/icons/chart.png';
+import walletCheckIcon from '../assets/icons/wallet-check.png';
+import judgeIcon from '../assets/icons/judge.png';
 
 interface HowWeWorkProps {
     variant?: 'default' | 'light';
@@ -47,7 +51,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => 
                         {/* Item 1: Independent Advice */}
                         <div className={`p-8 md:p-16 border-b ${borderColor}`}>
                             <div className="mb-8">
-                                <img src="/src/assets/icons/menu.png" alt="Icon" className={imageClass} />
+                                <img src={menuIcon} alt="Icon" className={imageClass} />
                             </div>
                             <h3 className={`text-2xl font-serif ${textColor} mb-6`}>Independent Advice</h3>
                             <p className={`${subTextColor} font-light text-lg leading-relaxed`}>
@@ -58,7 +62,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => 
                         {/* Item 3: Long-Term Discipline */}
                         <div className={`p-8 md:p-16 border-b md:border-b-0 ${borderColor}`}>
                             <div className="mb-8">
-                                <img src="/src/assets/icons/chart.png" alt="Icon" className={imageClass} />
+                                <img src={chartIcon} alt="Icon" className={imageClass} />
                             </div>
                             <h3 className={`text-2xl font-serif ${textColor} mb-6`}>Long-Term Discipline</h3>
                             <p className={`${subTextColor} font-light text-lg leading-relaxed`}>
@@ -72,7 +76,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => 
                         {/* Item 2: Risk Before Returns */}
                         <div className={`p-8 md:p-16 border-b ${borderColor}`}>
                             <div className="mb-8">
-                                <img src="/src/assets/icons/wallet-check.png" alt="Icon" className={imageClass} />
+                                <img src={walletCheckIcon} alt="Icon" className={imageClass} />
                             </div>
                             <h3 className={`text-2xl font-serif ${textColor} mb-6`}>Risk Before Returns</h3>
                             <p className={`${subTextColor} font-light text-lg leading-relaxed`}>
@@ -83,7 +87,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => 
                         {/* Item 4: Fiduciary Responsibility */}
                         <div className={`p-8 md:p-16`}>
                             <div className="mb-8">
-                                <img src="/src/assets/icons/judge.png" alt="Icon" className={imageClass} />
+                                <img src={judgeIcon} alt="Icon" className={imageClass} />
                             </div>
                             <h3 className={`text-2xl font-serif ${textColor} mb-6`}>Fiduciary Responsibility</h3>
                             <p className={`${subTextColor} font-light text-lg leading-relaxed`}>
