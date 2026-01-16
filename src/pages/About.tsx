@@ -22,21 +22,29 @@ export const About: React.FC = () => {
     <main className="flex-grow bg-[#F7F2EF] text-[#0B1B2F] pt-32 pb-20 overflow-hidden">
 
       {/* Section 1: Profile & Quote */}
-      <section ref={section1Ref} className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 mb-32 px-4 md:px-12 opacity-0">
+      <section ref={section1Ref} className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16 mb-24 md:mb-32 px-6 md:px-12 opacity-0">
         {/* Profile Image */}
-        <div className="w-full md:w-1/3">
-          <img src={profileImg} alt="Mehul Jain" className="w-full rounded-lg shadow-sm" />
+        <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+          <div className="relative group max-w-[280px] md:max-w-none">
+            <img src={profileImg} alt="Mehul Jain" className="w-full rounded-lg shadow-sm relative z-10" />
+            <div className="absolute -inset-2 border border-[#0B1B2F]/5 rounded-lg -z-0 translate-x-1 translate-y-1"></div>
+          </div>
         </div>
 
         {/* Quote */}
-        <div className="w-full md:w-2/3 space-y-8">
-          <blockquote className="text-2xl md:text-3xl font-serif leading-relaxed text-[#594D46]">
+        <div className="w-full md:w-2/3 flex flex-col items-center md:items-start space-y-8">
+          <blockquote className="text-xl md:text-3xl font-serif leading-relaxed text-[#594D46] text-center md:text-left">
             “Clients trust us with decisions that affect their families, their businesses, and their future.
-            <br /><br />
+            <br className="hidden md:block" />
+            <br className="hidden md:block" />
+            <span className="md:hidden"><br /></span>
             Our responsibility is to act in their best interest—clearly, independently, and without conflict.”
           </blockquote>
-          <div className="text-[#594D46] font-light">
-            Mehul Jain, CFA, Founder
+
+          <div className="w-16 h-[1px] bg-[#0B1B2F]/20 md:hidden"></div>
+
+          <div className="text-[#594D46] font-light tracking-wide text-sm md:text-base uppercase">
+            <span className="font-semibold text-[#0B1B2F]">Mehul Jain</span>, CFA — Founder
           </div>
         </div>
       </section>
