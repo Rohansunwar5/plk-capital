@@ -3,7 +3,7 @@ import { useReveal, useStagger } from '../hooks/useGsap';
 import { WhatWeDo } from '../components/WhatWeDo';
 import { Philosophy } from '../components/Philosophy';
 import { HowWeWork } from '../components/HowWeWork';
-import aboutUs1 from '../assets/aboutUs1.png'; // Using as placeholder for the main hero image
+import aboutUs1 from '../assets/services.avif'; // Using as placeholder for the main hero image
 
 export const Services: React.FC = () => {
     const heroRef = useRef<HTMLElement>(null);
@@ -44,14 +44,14 @@ export const Services: React.FC = () => {
                             <img src={aboutUs1} alt="Grow with us" className="w-full h-full object-cover scale-110" />
 
                             {/* Overlay Graph/Graphic Placeholder */}
-                            <div className="absolute bottom-1/4 left-1/4 md:left-0 right-1/4 md:right-auto bg-white/10 backdrop-blur-md p-4 rounded-lg border border-white/20 shadow-lg w-48">
+                            {/* <div className="absolute bottom-1/4 left-1/4 md:left-0 right-1/4 md:right-auto bg-white/10 backdrop-blur-md p-4 rounded-lg border border-white/20 shadow-lg w-48">
                                 <div className="space-y-2">
                                     <div className="h-2 w-3/4 bg-blue-400/80 rounded"></div>
                                     <div className="h-8 w-8 bg-blue-400/80 rounded mx-auto mt-4"></div>
                                     <div className="h-12 w-12 bg-blue-300/80 rounded mx-auto -mt-2"></div>
                                     <div className="text-center text-white text-xs font-bold mt-2">GROWTH</div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
