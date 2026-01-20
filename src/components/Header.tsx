@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useLoadReveal, useHeaderScroll } from '../hooks/useGsap';
 import gsap from 'gsap';
 import logo from '../assets/logo.png';
+import logo2 from '../assets/logo2.png';
 
 export const Header: React.FC = () => {
     const location = useLocation();
@@ -58,7 +59,7 @@ export const Header: React.FC = () => {
         : "border border-white/20 bg-plk-navy/50 backdrop-blur-sm";
 
     const textColor = isLightPage ? "text-[#0B1B2F]" : "text-plk-white";
-    const logoSrc = logo;
+    const logoSrc = location.pathname === '/' ? logo : logo2;
 
     return (
         <>
@@ -76,8 +77,8 @@ export const Header: React.FC = () => {
                     <div className="flex justify-center">
                         <nav className={`flex items-center gap-8 rounded-full px-12 py-3 ${navContainerClass} whitespace-nowrap transition-all duration-300`}>
                             <Link to="/about" className={`text-sm font-medium ${location.pathname === '/about' ? 'text-plk-lima' : textColor} hover:text-plk-lima`}>About Us</Link>
-                            <a href="#solutions" className={`text-sm font-medium ${textColor} hover:text-plk-lima`}>Solutions</a>
-                            <a href="#chat" className={`text-sm font-medium ${textColor} hover:text-plk-lima`}>Lets Chat</a>
+                            <Link to="/services" className={`text-sm font-medium ${location.pathname === '/services' ? 'text-plk-lima' : textColor} hover:text-plk-lima`}>Solutions</Link>
+                            <Link to="/contact" className={`text-sm font-medium ${textColor} hover:text-plk-lima`}>Lets Chat</Link>
                         </nav>
                     </div>
 
@@ -111,8 +112,8 @@ export const Header: React.FC = () => {
                 <nav ref={menuLinksRef} className="flex flex-col items-center gap-10 text-center">
                     <Link to="/" className="mobile-link text-4xl font-serif text-white hover:text-plk-lima transition-colors">Home</Link>
                     <Link to="/about" className="mobile-link text-4xl font-serif text-white hover:text-plk-lima transition-colors">About Us</Link>
-                    <a href="#solutions" className="mobile-link text-4xl font-serif text-white hover:text-plk-lima transition-colors" onClick={() => setIsMenuOpen(false)}>Solutions</a>
-                    <a href="#chat" className="mobile-link text-4xl font-serif text-white hover:text-plk-lima transition-colors" onClick={() => setIsMenuOpen(false)}>Lets Chat</a>
+                    <Link to="/services" className="mobile-link text-4xl font-serif text-white hover:text-plk-lima transition-colors" onClick={() => setIsMenuOpen(false)}>Solutions</Link>
+                    <Link to="/contact" className="mobile-link text-4xl font-serif text-white hover:text-plk-lima transition-colors" onClick={() => setIsMenuOpen(false)}>Lets Chat</Link>
 
                     <div className="mobile-link mt-12 pt-12 border-t border-white/10 w-full max-w-[200px]">
                         <p className="text-plk-grey text-xs tracking-widest uppercase mb-4">Contact</p>

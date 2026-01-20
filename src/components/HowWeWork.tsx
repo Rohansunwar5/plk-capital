@@ -26,8 +26,9 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => 
     const sectionBg = isLight ? 'bg-[#F7F2EF]' : 'bg-plk-navy';
     const textColor = isLight ? 'text-[#152E4D]' : 'text-white';
     const subTextColor = isLight ? 'text-[#152E4D]/80' : 'text-plk-grey';
-    const borderColor = isLight ? 'border-[#152E4D]/10' : 'border-white/10';
+    const borderColor = isLight ? 'border-black' : 'border-white/10';
 
+    const separatorColor = isLight ? 'via-black' : 'via-white';
     const imageClass = isLight ? 'w-12 h-12 filter invert' : 'w-12 h-12';
 
     return (
@@ -44,12 +45,15 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => 
                 </div>
 
                 {/* Staggered Grid Content */}
-                <div ref={gridRef} className="flex flex-col md:flex-row">
+                <div ref={gridRef} className="flex flex-col md:flex-row relative">
+
+                    {/* Vertical Divider (Desktop Only) */}
+                    <div className={`hidden md:block absolute left-1/2 top-10 bottom-10 w-[1px] bg-gradient-to-b from-transparent ${separatorColor} to-transparent opacity-20 -translate-x-1/2 z-10`}></div>
 
                     {/* Left Column (Items 1 & 3) */}
-                    <div className={`w-full md:w-1/2 md:border-r ${borderColor}`}>
+                    <div className={`w-full md:w-1/2`}>
                         {/* Item 1: Independent Advice */}
-                        <div className={`p-8 md:p-16 border-b ${borderColor}`}>
+                        <div className={`p-8 md:p-16 relative border-b ${borderColor}`}>
                             <div className="mb-8">
                                 <img src={menuIcon} alt="Icon" className={imageClass} />
                             </div>
@@ -60,7 +64,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => 
                         </div>
 
                         {/* Item 3: Long-Term Discipline */}
-                        <div className={`p-8 md:p-16 border-b md:border-b-0 ${borderColor}`}>
+                        <div className={`p-8 md:p-16 relative border-b md:border-b-0 ${borderColor}`}>
                             <div className="mb-8">
                                 <img src={chartIcon} alt="Icon" className={imageClass} />
                             </div>
@@ -74,7 +78,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => 
                     {/* Right Column (Items 2 & 4) - Staggered Down */}
                     <div className="w-full md:w-1/2 md:mt-24">
                         {/* Item 2: Risk Before Returns */}
-                        <div className={`p-8 md:p-16 border-b ${borderColor}`}>
+                        <div className={`p-8 md:p-16 relative border-b ${borderColor}`}>
                             <div className="mb-8">
                                 <img src={walletCheckIcon} alt="Icon" className={imageClass} />
                             </div>
@@ -85,7 +89,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ variant = 'default' }) => 
                         </div>
 
                         {/* Item 4: Fiduciary Responsibility */}
-                        <div className={`p-8 md:p-16`}>
+                        <div className={`p-8 md:p-16 relative`}>
                             <div className="mb-8">
                                 <img src={judgeIcon} alt="Icon" className={imageClass} />
                             </div>

@@ -91,10 +91,36 @@ export const About: React.FC = () => {
           In simple terms, this means our advice is driven only by what is right for you—not by commissions, targets, or product incentives.
         </p>
 
-        {/* Placeholders for Images (Side by Side) */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-[#EAE5E1] aspect-square rounded-sm"></div>
-          <div className="bg-[#EAE5E1] aspect-square rounded-sm"></div>
+        {/* Two Column Text Content */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 mb-16 text-left">
+          {/* Left Column */}
+          <div className="bg-white p-8 md:p-12 shadow-sm rounded-sm">
+            <h3 className="text-xl md:text-2xl font-serif text-[#0B1B2F] mb-8">
+              We Are Paid Only by our Clients.
+            </h3>
+            <ul className="space-y-4 text-lg text-[#594D46] font-light">
+              <li>No commissions</li>
+              <li>No product incentives</li>
+              <li>No hidden costs</li>
+              <li>No pressure to buy or change investments</li>
+            </ul>
+          </div>
+
+          {/* Right Column */}
+          <div className="bg-[#F7F2EF] md:bg-white p-8 md:p-12 shadow-sm rounded-sm">
+            <h3 className="text-xl md:text-2xl font-serif text-[#0B1B2F] mb-8">
+              What This Means in Practice
+            </h3>
+            <ul className="space-y-4 text-lg text-[#594D46] font-light list-disc pl-5">
+              <li>No commissions</li>
+              <li>No product incentives</li>
+              <li>No hidden costs</li>
+              <li>No pressure to buy or change investments</li>
+              <li>
+                If we ever believe something is not right for you, we will say no—even if it means we earn less.
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="space-y-6 text-[#594D46] font-light max-w-3xl mx-auto">
