@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
         }
     }, [isMenuOpen]);
 
-    // Close menu on route change
+
     useEffect(() => {
         setIsMenuOpen(false);
     }, [location.pathname]);
@@ -109,6 +109,16 @@ export const Header: React.FC = () => {
                 style={{ clipPath: 'circle(0% at 100% 0%)' }}
                 data-open={isMenuOpen}
             >
+                {/* Close Button */}
+                <button
+                    onClick={() => setIsMenuOpen(false)}
+                    className="absolute top-6 right-4 p-2 text-white hover:text-plk-lima transition-colors"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
                 <nav ref={menuLinksRef} className="flex flex-col items-center gap-10 text-center">
                     <Link to="/" className="mobile-link text-4xl font-serif text-white hover:text-plk-lima transition-colors">Home</Link>
                     <Link to="/about" className="mobile-link text-4xl font-serif text-white hover:text-plk-lima transition-colors">About Us</Link>

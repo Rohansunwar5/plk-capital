@@ -10,8 +10,18 @@ export const Footer: React.FC = () => {
                 <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24 mb-20">
 
                     {/* Logo Column */}
-                    <div className="flex-shrink-0">
-                        <img src={logo} alt="PLK Capital" className="h-10 md:h-12 object-contain" />
+                    <div className="flex-shrink-0 max-w-xs">
+                        <img src={logo} alt="PLK Capital" className="h-10 md:h-12 object-contain mb-6" />
+                        <div className="text-gray-400 text-sm font-light space-y-3 leading-relaxed">
+                            <p>Company name: PLK CAPITAL ADVISORS PRIVATE LIMITED</p>
+                            <p>
+                                #51, Pushpa Vatika, 1st Floor, C Flat, Vanivilas Road,
+                                Basavanagudi, Bangalore- 560004, Karnataka
+                            </p>
+                            <p>+91-9620050061</p>
+                            <p>Plkcapital14@gmail.com</p>
+                            <p>CIN - U66190KA2025PTC210648</p>
+                        </div>
                     </div>
 
                     {/* Links Container */}
